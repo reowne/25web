@@ -1,0 +1,89 @@
+:root {
+    --point-color: #8ecdf1;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .main-header {
+    padding: 30px 0 10px;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+  }
+  
+  .main-nav a.active {
+    color: var(--point-color);
+    border-bottom: 2px solid var(--point-color);
+    font-weight: bold;
+  }
+  
+  .credit-container {
+    padding: 50px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .credit-container h1 {
+    color: var(--point-color);
+    margin-bottom: 30px;
+  }
+  
+  .credit-container a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .note {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  #back-to-menu {
+    background-color: transparent;
+    border: 2px solid var(--point-color, #8ecdf1);
+    border-radius: 8px;
+    color: var(--point-color, #8ecdf1);
+    font-weight: bold;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+  }
+  
+  #back-to-menu:hover {
+    background-color: var(--point-color, #8ecdf1);
+    color: #000;
+  }
+  
