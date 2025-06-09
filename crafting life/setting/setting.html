@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>설정</title>
+  <link rel="stylesheet" href="setting.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo" onclick="location.href='../menu/menu.html'">CRAFTING LIFE</div>
+  </header>
+
+  <main class="settings-content">
+    <h1>설정</h1>
+
+    <div class="setting-group">
+      <label for="bgm-toggle">배경 음악</label>
+      <input type="checkbox" id="bgm-toggle" />
+    </div>
+
+    <div class="setting-group">
+      <label for="volume-slider">음량</label>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" />
+    </div>
+
+    <div class="setting-group">
+      <label for="color-picker">포인트 색상 선택</label>
+      <input type="color" id="color-picker" value="#8ecdf1" />
+    </div>
+
+    <div class="setting-group">
+      <button id="reset-settings">설정 초기화</button>
+    </div>
+
+    <div class="setting-group">
+      <button id="back-to-menu">돌아가기</button>
+    </div>
+  </main>
+
+  <script src="setting.js"></script>
+  <script>
+    // 돌아가기 버튼 핸들러
+    document.getElementById('back-to-menu').addEventListener('click', () => {
+      location.href = '../menu/menu.html';
+    });
+  </script>
+  <iframe src="../BGM/bgmplayer.html" style="display:none;" id="bgm-frame"></iframe>
+</body>
+</html>

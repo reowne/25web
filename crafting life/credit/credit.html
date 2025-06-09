@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>크레딧 - 크래프팅 라이프</title>
+  <link rel="stylesheet" href="credit.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo" onclick="location.href='../menu/menu.html'">CRAFTING LIFE</div>
+  </header>
+
+  <main class="credit-container">
+    <h1>📸 크레딧 및 출처</h1>
+    <ul>
+      <li>맵 이미지 – <a href="https://pixabay.com/illustrations/river-map-dnd-map-cartoon-camping-6587418/" target="_blank">이미지 출처: Pixabay, 사진 제공자: SEVEN-OF-ALTEA</a></li>
+      <li>캐릭터 이미지 – <a href="https://pixabay.com/illustrations/ai-generated-scout-baby-adventure-9490977/" target="_blank">이미지 출처: Pixabay, 사진 제공자: olenchic</a></li>
+      <li>석판 이미지 – <a href="https://pixabay.com/users/braian_tamboreiro-22709673/" target="_blank">이미지 출처: Pixabay, 사진 제공자:braian_tamboreiro </a></li>
+      <li>BGM – <a href="https://youtu.be/4IMPQ26yJ1w?si=emW4H3VrZtrtlaww" target="_blank">BGM출처:Youtube, 영상 제공자:Sea Pearl </a></li>
+      <!-- 필요할 때 추가 -->
+    </ul>
+
+    <p class="note">모든 이미지는 무료 상업용 라이선스입니다.</p>
+    <div class="setting-group">
+        <button id="back-to-menu">돌아가기</button>
+      </div>
+    </main>
+  
+    <script>
+      // 돌아가기 버튼 핸들러
+      document.getElementById('back-to-menu').addEventListener('click', () => {
+        location.href = '../menu/menu.html';
+      });
+    </script>
+  <iframe src="../BGM/bgmplayer.html" style="display:none;" id="bgm-frame"></iframe>
+
+</body>
+</html>

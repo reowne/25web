@@ -1,0 +1,206 @@
+:root {
+  --point-color: #8ecdf1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.main-header {
+  padding: 30px 0 10px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--point-color);
+  text-shadow: 2px 2px #000;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  padding-bottom: 4px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--point-color);
+  border-bottom: 2px solid var(--point-color);
+}
+  
+.main-nav a.active {
+  color: var(--point-color);
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+}
+
+#growth-container {
+  position: relative;
+  margin-top: 60px;
+  height: 400px;
+  user-select: none;
+}
+
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 0 5px #000 inset;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+}
+
+/* 잠긴 상태 */
+.node.locked {
+  background: #555;
+  cursor: default;
+  color: #ccc;
+  box-shadow: none;
+}
+
+/* 클릭했지만 습득 전 */
+.node.selected {
+  background: #e4f5ff;
+  color: #000;
+  box-shadow: 0 0 8px #a0cfff;
+}
+
+/* 습득 완료 */
+.node.active {
+  background: var(--point-color);
+  color: #000;
+  box-shadow: 0 0 10px #5aa3d9;
+}
+
+/* 팝업 스타일 */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  transform: translate(-50%, -50%);
+  background: #222;
+  border: 2px solid var(--point-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px var(--point-color);
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  position: relative;
+}
+
+#popup-text {
+  font-size: 1rem;
+  min-height: 60px;
+  white-space: pre-wrap;
+}
+
+#action-btn {
+  background-color: var(--point-color);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#action-btn:hover {
+  background-color: #6ea8cc;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  color: var(--point-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* 선 연결용 캔버스 스타일 */
+#lines {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+  width: 600px;
+  height: 400px;
+}
+
+.home-button {
+  margin: 40px auto;
+  padding: 12px 30px;
+  background-color: var(--point-color);
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
+}
+
+.home-button:hover {
+  background-color: #a0e4ff;
+  transform: scale(1.05);
+}
