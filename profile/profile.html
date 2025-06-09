@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>크래프팅 라이프</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo" onclick="location.href='../menu/menu.html'">CRAFTING LIFE</div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="../main/main.html" data-page="main">메인</a></li>
+      <li><a href="../profile/profile.html" data-page="profile">자기소개</a></li>
+      <li><a href="../crafting/crafting.html" data-page="crafting">크래프팅</a></li>
+      <li><a href="../growth/growth.html" data-page="growth">성장기록</a></li>
+    </ul>
+  </nav>  
+
+  <main class="profile-container">
+    <section class="character-portrait">
+      <img src="character.png" alt="캐릭터 이미지" />
+    </section>
+
+    <section class="character-info">
+      <h1>프로필</h1>
+      <p>코드짜기, 게임과 공예를 사랑하는 크래프터</p>
+
+      <div class="stats">
+        <h2>능력치</h2>
+        <div class="stat">
+          <span>기초언어 이해도</span>
+          <div class="stat-bar">
+            <div class="stat-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <span>집중력</span>
+          <div class="stat-bar">
+            <div class="stat-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <span>자기주도 학습력</span>
+          <div class="stat-bar">
+            <div class="stat-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <span>창작 욕구</span>
+          <div class="stat-bar">
+            <div class="stat-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="equipment">
+        <h2>인벤토리</h2>
+        <div class="equip-slot" title="문제 해결력 증진">구글링</div>
+        <div class="equip-slot" title="깔끔함 추구">손재주</div>
+        <div class="equip-slot" title="능숙하진 않으나 능력 연마">전공수강</div>
+      </div>
+
+      <button class="next-btn" onclick="location.href='../crafting/crafting.html'">다음으로 넘어가기 →</button>
+    </section>
+  </main>
+  <iframe src="../BGM/bgmplayer.html" style="display:none;" id="bgm-frame"></iframe>
+</body>
+</html>

@@ -1,0 +1,177 @@
+:root {
+    --point-color: #8ecdf1;
+  }
+  
+  body {
+    margin: 0;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .main-header {
+    padding: 30px 0 10px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--point-color);
+    cursor: pointer;
+    text-shadow: 2px 2px #000;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    padding-bottom: 4px;
+  }
+  
+  .main-nav a:hover,
+  .main-nav a.active {
+    color: var(--point-color);
+    border-bottom: 2px solid var(--point-color);
+  }
+    
+  .main-nav a.active {
+    color: var(--point-color);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .profile-container {
+    display: flex;
+    max-width: 900px;
+    margin: 60px auto 100px;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .character-portrait {
+    flex: 1;
+    background: #222;
+    border: 2px solid var(--point-color);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .character-portrait img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--point-color);
+  }
+  
+  .character-info {
+    flex: 2;
+  }
+  
+  .character-info h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--point-color);
+    text-shadow: 1px 1px 3px #000;
+  }
+  
+  .character-info p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .stats {
+    margin-bottom: 40px;
+  }
+  
+  .stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--point-color);
+    padding-bottom: 6px;
+  }
+  
+  .stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .stat span {
+    width: 80px;
+    font-weight: 600;
+  }
+  
+  .stat-bar {
+    flex: 1;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 20px;
+    box-shadow: inset 0 0 5px #000;
+  }
+  
+  .stat-fill {
+    height: 100%;
+    background: var(--point-color);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 8px var(--point-color);
+  }
+  
+  .equipment {
+    margin-bottom: 40px;
+  }
+  
+  .equipment h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--point-color);
+    padding-bottom: 6px;
+  }
+  
+  .equip-slot {
+    display: inline-block;
+    background: #333;
+    border: 2px solid var(--point-color);
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    cursor: default;
+    user-select: none;
+    box-shadow: 0 0 6px #000 inset;
+    transition: box-shadow 0.3s;
+    position: relative;
+  }
+  
+  .equip-slot:hover {
+    box-shadow: 0 0 12px var(--point-color);
+  }
+  
+  .next-btn {
+    background: var(--point-color);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 36px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .next-btn:hover {
+    background: #72b1dd;
+  }
+  
